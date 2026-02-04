@@ -115,6 +115,23 @@ async def get_contact_submissions():
 # Include the router in the main app
 app.include_router(api_router)
 
+# Mount static files for HTML version
+static_path = Path(__file__).parent.parent / "frontend" / "public"
+if static_path.exists():
+    app.mount("/static", StaticFiles(directory=str(static_path)), name="static")
+    
+    # Serve HTML pages
+    @app.get("/")
+    async def serve_home():
+        return FileResponse(static_path / "index.html")
+    
+    @app.get("/{page}.html")
+    async def serve_page(page: str):
+        file_path = static_path / f"{page}.html"
+        if file_path.exists():
+            return FileResponse(file_path)
+        return {"error": "Page not found"}
+
 app.add_middleware(
     CORSMiddleware,
     allow_credentials=True,
