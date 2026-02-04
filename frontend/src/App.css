@@ -1,34 +1,186 @@
-.App-logo {
-    height: 40vmin;
-    pointer-events: none;
+/* Global Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-    .App-logo {
-        animation: App-logo-spin infinite 20s linear;
-    }
+html {
+  scroll-behavior: smooth;
 }
 
-.App-header {
-    background-color: #0f0f10;
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    font-size: calc(10px + 2vmin);
-    color: white;
+body {
+  margin: 0;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: #000;
+  color: #fff;
 }
 
-.App-link {
-    color: #61dafb;
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Poppins', 'Inter', sans-serif;
+  font-weight: 700;
 }
 
-@keyframes App-logo-spin {
-    from {
-        transform: rotate(0deg);
-    }
-    to {
-        transform: rotate(360deg);
-    }
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #0B0B0B;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #C9A14A;
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #D4AF37;
+}
+
+/* Selection */
+::selection {
+  background-color: #C9A14A;
+  color: #000;
+}
+
+/* App Container */
+.App {
+  min-height: 100vh;
+  background-color: #000;
+}
+
+/* Button Hover Glow Effect */
+.hover\:shadow-gold-glow:hover {
+  box-shadow: 0 0 20px rgba(201, 161, 74, 0.6), 0 0 40px rgba(201, 161, 74, 0.3);
+}
+
+/* Gradient Radial Background */
+.bg-gradient-radial {
+  background: radial-gradient(circle at center, var(--tw-gradient-stops));
+}
+
+/* Animation Classes */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.animate-fadeInUp {
+  animation: fadeInUp 0.6s ease-out;
+}
+
+.animate-fadeIn {
+  animation: fadeIn 0.6s ease-out;
+}
+
+/* Smooth Transitions */
+a, button {
+  transition: all 0.3s ease;
+}
+
+/* Link Styles */
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Form Input Focus States */
+input:focus,
+textarea:focus,
+select:focus {
+  outline: none;
+  border-color: #C9A14A;
+}
+
+/* Utility Classes for Custom Colors */
+.text-gold {
+  color: #C9A14A;
+}
+
+.text-gold-light {
+  color: #D4AF37;
+}
+
+.bg-gold {
+  background-color: #C9A14A;
+}
+
+.bg-gold-light {
+  background-color: #D4AF37;
+}
+
+.border-gold {
+  border-color: #C9A14A;
+}
+
+.bg-dark {
+  background-color: #000;
+}
+
+.bg-darker {
+  background-color: #0B0B0B;
+}
+
+/* Glass Morphism Effect */
+.glass {
+  background: rgba(11, 11, 11, 0.6);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(201, 161, 74, 0.1);
+}
+
+/* Image Optimization */
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Responsive Font Sizes */
+@media (max-width: 640px) {
+  h1 {
+    font-size: 2rem;
+  }
+  
+  h2 {
+    font-size: 1.75rem;
+  }
+  
+  h3 {
+    font-size: 1.5rem;
+  }
+}
+
+/* Prevent Text Selection on Buttons */
+button {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* Focus Visible for Accessibility */
+button:focus-visible,
+a:focus-visible {
+  outline: 2px solid #C9A14A;
+  outline-offset: 2px;
 }
