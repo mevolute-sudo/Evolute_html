@@ -1,86 +1,8 @@
 import { Link } from 'react-router-dom';
+import { servicesData } from '../data/servicesData';
 
 const Services = () => {
-  const services = [
-    {
-      title: 'Digital Marketing',
-      icon: '📊',
-      description: 'Comprehensive digital marketing strategies that transform your online presence and drive measurable business growth.',
-      benefits: [
-        'Full-funnel marketing strategies',
-        'Multi-channel campaign management',
-        'Advanced analytics and reporting',
-        'Conversion rate optimization',
-        'Customer journey mapping',
-      ],
-      outcome: 'Achieve a cohesive, high-performing digital presence that attracts, engages, and converts your ideal customers at every touchpoint.',
-    },
-    {
-      title: 'Social Media Marketing',
-      icon: '📱',
-      description: 'Build engaged communities and amplify your brand voice across all major social platforms with data-driven content strategies.',
-      benefits: [
-        'Platform-specific content strategies',
-        'Community management and engagement',
-        'Influencer partnership coordination',
-        'Social listening and reputation management',
-        'Viral content creation',
-      ],
-      outcome: 'Develop a loyal, engaged following that amplifies your message, drives organic reach, and creates authentic brand advocates.',
-    },
-    {
-      title: 'Performance Ads',
-      icon: '🎯',
-      description: 'Precision-targeted paid advertising campaigns across Google, Meta, LinkedIn, and more that deliver exceptional ROI.',
-      benefits: [
-        'Advanced audience targeting',
-        'A/B testing and optimization',
-        'Retargeting campaigns',
-        'Budget optimization',
-        'Real-time performance tracking',
-      ],
-      outcome: 'Generate high-quality leads and sales at optimal cost-per-acquisition while scaling your campaigns profitably.',
-    },
-    {
-      title: 'Website Design & Development',
-      icon: '💻',
-      description: 'Stunning, high-converting websites built with cutting-edge technology, optimized for user experience and business goals.',
-      benefits: [
-        'Custom responsive design',
-        'Mobile-first development',
-        'SEO optimization',
-        'Lightning-fast loading speeds',
-        'Conversion-focused architecture',
-      ],
-      outcome: 'Own a website that not only looks premium but converts visitors into customers and serves as your 24/7 sales machine.',
-    },
-    {
-      title: 'Branding & Creative',
-      icon: '🎨',
-      description: 'Distinctive brand identities and creative campaigns that make your business unforgettable and emotionally resonant.',
-      benefits: [
-        'Brand strategy and positioning',
-        'Logo and visual identity design',
-        'Brand guidelines development',
-        'Marketing collateral creation',
-        'Campaign creative production',
-      ],
-      outcome: 'Establish a powerful, cohesive brand identity that commands attention, builds trust, and differentiates you from competitors.',
-    },
-    {
-      title: 'Lead Generation',
-      icon: '🚀',
-      description: 'Strategic multi-channel campaigns designed to attract, capture, and nurture high-quality leads that convert into customers.',
-      benefits: [
-        'Landing page optimization',
-        'Lead magnet development',
-        'Email marketing automation',
-        'Lead scoring and qualification',
-        'CRM integration',
-      ],
-      outcome: 'Build a consistent pipeline of qualified leads that fuel your sales team and drive predictable revenue growth.',
-    },
-  ];
+  const services = servicesData;
 
   return (
     <div className="min-h-screen bg-dark pt-20">
