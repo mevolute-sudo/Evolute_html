@@ -1,9 +1,6 @@
 import { Link } from 'react-router-dom';
-import { servicesData } from '../data/servicesData';
 
 const Services = () => {
-  const services = servicesData;
-
   return (
     <div className="min-h-screen bg-dark pt-20">
       {/* Hero */}
@@ -21,54 +18,64 @@ const Services = () => {
         </div>
       </section>
 
-      {/* Services Grid */}
+      {/* Digital Marketing */}
       <section className="py-20 bg-dark" data-testid="services-grid">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="space-y-16">
-            {services.map((service, index) => (
-              <div
-                key={index}
-                className={`flex flex-col ${
-                  index % 2 === 0 ? 'lg:flex-row' : 'lg:flex-row-reverse'
-                } gap-8 items-center`}
-                data-testid={`service-detail-${index}`}
-              >
-                {/* Icon/Visual */}
-                <div className="lg:w-1/3">
-                  <div className="bg-gradient-to-br from-darker to-dark border border-gold/20 rounded-3xl p-12 text-center hover:border-gold/60 transition-all duration-300 hover:shadow-gold-glow">
-                    <div className="text-8xl mb-4">{service.icon}</div>
-                    <h3 className="text-2xl font-bold text-gold">{service.title}</h3>
-                  </div>
-                </div>
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-16">
+          
+          <ServiceCard
+            icon="📊"
+            title="Digital Marketing"
+            description="Comprehensive digital marketing strategies that transform your online presence and drive measurable business growth."
+            benefits={['Full-funnel marketing strategies', 'Multi-channel campaign management', 'Advanced analytics and reporting', 'Conversion rate optimization', 'Customer journey mapping']}
+            outcome="Achieve a cohesive, high-performing digital presence that attracts, engages, and converts your ideal customers at every touchpoint."
+            reverse={false}
+          />
 
-                {/* Content */}
-                <div className="lg:w-2/3">
-                  <div className="bg-gradient-to-br from-darker to-dark border border-gold/20 rounded-3xl p-8 md:p-10">
-                    <p className="text-lg text-gray-300 leading-relaxed mb-6">
-                      {service.description}
-                    </p>
+          <ServiceCard
+            icon="📱"
+            title="Social Media Marketing"
+            description="Build engaged communities and amplify your brand voice across all major social platforms with data-driven content strategies."
+            benefits={['Platform-specific content strategies', 'Community management and engagement', 'Influencer partnership coordination', 'Social listening and reputation management', 'Viral content creation']}
+            outcome="Develop a loyal, engaged following that amplifies your message, drives organic reach, and creates authentic brand advocates."
+            reverse={true}
+          />
 
-                    <div className="mb-6">
-                      <h4 className="text-xl font-bold text-white mb-4">What You Get:</h4>
-                      <ul className="space-y-2">
-                        {service.benefits.map((benefit, idx) => (
-                          <li key={idx} className="flex items-start text-gray-300">
-                            <span className="text-gold mr-3 mt-1 flex-shrink-0">✓</span>
-                            <span>{benefit}</span>
-                          </li>
-                        ))}
-                      </ul>
-                    </div>
+          <ServiceCard
+            icon="🎯"
+            title="Performance Ads"
+            description="Precision-targeted paid advertising campaigns across Google, Meta, LinkedIn, and more that deliver exceptional ROI."
+            benefits={['Advanced audience targeting', 'A/B testing and optimization', 'Retargeting campaigns', 'Budget optimization', 'Real-time performance tracking']}
+            outcome="Generate high-quality leads and sales at optimal cost-per-acquisition while scaling your campaigns profitably."
+            reverse={false}
+          />
 
-                    <div className="border-t border-gold/20 pt-6">
-                      <h4 className="text-lg font-bold text-gold mb-3">The Outcome:</h4>
-                      <p className="text-gray-300 leading-relaxed">{service.outcome}</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            ))}
-          </div>
+          <ServiceCard
+            icon="💻"
+            title="Website Design & Development"
+            description="Stunning, high-converting websites built with cutting-edge technology, optimized for user experience and business goals."
+            benefits={['Custom responsive design', 'Mobile-first development', 'SEO optimization', 'Lightning-fast loading speeds', 'Conversion-focused architecture']}
+            outcome="Own a website that not only looks premium but converts visitors into customers and serves as your 24/7 sales machine."
+            reverse={true}
+          />
+
+          <ServiceCard
+            icon="🎨"
+            title="Branding & Creative"
+            description="Distinctive brand identities and creative campaigns that make your business unforgettable and emotionally resonant."
+            benefits={['Brand strategy and positioning', 'Logo and visual identity design', 'Brand guidelines development', 'Marketing collateral creation', 'Campaign creative production']}
+            outcome="Establish a powerful, cohesive brand identity that commands attention, builds trust, and differentiates you from competitors."
+            reverse={false}
+          />
+
+          <ServiceCard
+            icon="🚀"
+            title="Lead Generation"
+            description="Strategic multi-channel campaigns designed to attract, capture, and nurture high-quality leads that convert into customers."
+            benefits={['Landing page optimization', 'Lead magnet development', 'Email marketing automation', 'Lead scoring and qualification', 'CRM integration']}
+            outcome="Build a consistent pipeline of qualified leads that fuel your sales team and drive predictable revenue growth."
+            reverse={true}
+          />
+
         </div>
       </section>
 
@@ -90,6 +97,39 @@ const Services = () => {
           </Link>
         </div>
       </section>
+    </div>
+  );
+};
+
+const ServiceCard = ({ icon, title, description, benefits, outcome, reverse }) => {
+  return (
+    <div className={`flex flex-col ${reverse ? 'lg:flex-row-reverse' : 'lg:flex-row'} gap-8 items-center`}>
+      <div className="lg:w-1/3">
+        <div className="bg-gradient-to-br from-darker to-dark border border-gold/20 rounded-3xl p-12 text-center hover:border-gold/60 transition-all duration-300 hover:shadow-gold-glow">
+          <div className="text-8xl mb-4">{icon}</div>
+          <h3 className="text-2xl font-bold text-gold">{title}</h3>
+        </div>
+      </div>
+      <div className="lg:w-2/3">
+        <div className="bg-gradient-to-br from-darker to-dark border border-gold/20 rounded-3xl p-8 md:p-10">
+          <p className="text-lg text-gray-300 leading-relaxed mb-6">{description}</p>
+          <div className="mb-6">
+            <h4 className="text-xl font-bold text-white mb-4">What You Get:</h4>
+            <ul className="space-y-2">
+              {benefits.map((benefit, idx) => (
+                <li key={idx} className="flex items-start text-gray-300">
+                  <span className="text-gold mr-3 mt-1 flex-shrink-0">✓</span>
+                  <span>{benefit}</span>
+                </li>
+              ))}
+            </ul>
+          </div>
+          <div className="border-t border-gold/20 pt-6">
+            <h4 className="text-lg font-bold text-gold mb-3">The Outcome:</h4>
+            <p className="text-gray-300 leading-relaxed">{outcome}</p>
+          </div>
+        </div>
+      </div>
     </div>
   );
 };
