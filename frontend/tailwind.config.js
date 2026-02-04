@@ -52,7 +52,6 @@ module.exports = {
                                 '3': 'hsl(var(--chart-3))',
                                 '4': 'hsl(var(--chart-4))',
                                 '5': 'hsl(var(--chart-5))'
-                        }
                         },
                         gold: {
                                 DEFAULT: '#C9A14A',
@@ -61,6 +60,7 @@ module.exports = {
                         dark: {
                                 DEFAULT: '#000000',
                                 lighter: '#0B0B0B'
+                        }
                 },
                 keyframes: {
                         'accordion-down': {
