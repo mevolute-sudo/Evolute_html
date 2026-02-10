@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#000000">
+    <meta name="description" content="Evolute Marketing - Premium digital marketing agency specializing in data-driven strategies, performance marketing, and exceptional ROI for SMEs and ambitious businesses.">
+    <title>Evolute Marketing - Premium Digital Marketing Agency</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@400;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Styles -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="navbar-container">
+            <a href="index.html" class="navbar-logo">Evolute Marketing</a>
+            
+            <ul class="navbar-menu">
+                <li><a href="index.html" class="navbar-link" data-testid="nav-link-home">Home</a></li>
+                <li><a href="about.html" class="navbar-link" data-testid="nav-link-about-us">About Us</a></li>
+                <li><a href="services.html" class="navbar-link" data-testid="nav-link-services">Services</a></li>
+                <li><a href="why-choose-us.html" class="navbar-link" data-testid="nav-link-why-choose-us">Why Choose Us</a></li>
+                <li><a href="contact.html" class="navbar-link" data-testid="nav-link-contact">Contact</a></li>
+            </ul>
+            
+            <button class="navbar-toggle" aria-label="Toggle menu" data-testid="mobile-menu-toggle">
+                <svg viewBox="0 0 24 24">
+                    <path d="M4 6h16M4 12h16M4 18h16"></path>
+                </svg>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" data-testid="hero-section">
+        <div class="container">
+            <div class="hero-content">
+                <h1>
+                    Transform Your Brand
+                    <span class="text-gradient">With Premium Digital Marketing</span>
+                </h1>
+                <p>Data-driven strategies, creative excellence, and measurable results for ambitious businesses ready to dominate their market.</p>
+                <div class="hero-buttons">
+                    <a href="contact.html" class="btn btn-primary" data-testid="hero-cta-button">Get Started Today</a>
+                    <a href="services.html" class="btn btn-secondary" data-testid="hero-services-button">Our Services</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Snapshot -->
+    <section class="section section-gradient" data-testid="about-snapshot">
+        <div class="container">
+            <div class="section-title">
+                <h2>Who We Are</h2>
+                <div class="divider"></div>
+            </div>
+            <div class="text-center">
+                <p class="text-gray" style="font-size: 1.125rem; max-width: 64rem; margin: 0 auto 1.5rem;">
+                    Evolute Marketing is a premium digital marketing agency specializing in helping SMEs and ambitious businesses achieve extraordinary growth through strategic digital solutions.
+                </p>
+                <a href="about.html" class="text-gold" data-testid="learn-more-about-link" style="font-weight: 600;">Learn More About Us →</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Preview -->
+    <section class="section section-darker" data-testid="services-preview">
+        <div class="container">
+            <div class="section-title">
+                <h2>Our Services</h2>
+                <div class="divider"></div>
+            </div>
+            <div class="grid grid-3">
+                <div class="card" data-testid="service-card-0">
+                    <span class="card-icon">📊</span>
+                    <h3 class="card-title">Digital Marketing</h3>
+                    <p class="card-description">Comprehensive digital strategies that drive growth and maximize ROI for your business.</p>
+                </div>
+                <div class="card" data-testid="service-card-1">
+                    <span class="card-icon">📱</span>
+                    <h3 class="card-title">Social Media Marketing</h3>
+                    <p class="card-description">Build engaged communities and amplify your brand voice across all social platforms.</p>
+                </div>
+                <div class="card" data-testid="service-card-2">
+                    <span class="card-icon">🎯</span>
+                    <h3 class="card-title">Performance Ads</h3>
+                    <p class="card-description">Data-driven paid advertising campaigns that deliver measurable results and conversions.</p>
+                </div>
+                <div class="card" data-testid="service-card-3">
+                    <span class="card-icon">💻</span>
+                    <h3 class="card-title">Website Design & Development</h3>
+                    <p class="card-description">Stunning, high-converting websites built with cutting-edge technology and user experience.</p>
+                </div>
+                <div class="card" data-testid="service-card-4">
+                    <span class="card-icon">🎨</span>
+                    <h3 class="card-title">Branding & Creative</h3>
+                    <p class="card-description">Distinctive brand identities and creative campaigns that make you unforgettable.</p>
+                </div>
+                <div class="card" data-testid="service-card-5">
+                    <span class="card-icon">🚀</span>
+                    <h3 class="card-title">Lead Generation</h3>
+                    <p class="card-description">Strategic campaigns designed to attract, nurture, and convert high-quality leads.</p>
+                </div>
+            </div>
+            <div class="text-center" style="margin-top: 3rem;">
+                <a href="services.html" class="btn btn-primary" data-testid="view-all-services-button">View All Services</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Process Section -->
+    <section class="section section-gradient" data-testid="process-section">
+        <div class="container">
+            <div class="section-title">
+                <h2>Our Process</h2>
+                <div class="divider"></div>
+                <p>A proven methodology that transforms your vision into measurable results</p>
+            </div>
+            <div class="process-grid">
+                <div class="process-step" data-testid="process-step-0">
+                    <div class="step-number">01</div>
+                    <h3 class="step-title">Discovery & Strategy</h3>
+                    <p class="step-description">Deep dive into your business, audience, and goals to craft a winning strategy.</p>
+                </div>
+                <div class="process-step" data-testid="process-step-1">
+                    <div class="step-number">02</div>
+                    <h3 class="step-title">Creative Development</h3>
+                    <p class="step-description">Design compelling campaigns and assets that resonate with your target audience.</p>
+                </div>
+                <div class="process-step" data-testid="process-step-2">
+                    <div class="step-number">03</div>
+                    <h3 class="step-title">Execution & Launch</h3>
+                    <p class="step-description">Flawless implementation across all channels with precision and attention to detail.</p>
+                </div>
+                <div class="process-step" data-testid="process-step-3">
+                    <div class="step-number">04</div>
+                    <h3 class="step-title">Optimize & Scale</h3>
+                    <p class="step-description">Continuous monitoring, optimization, and scaling to maximize your ROI.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Client Trust Section -->
+    <section class="section section-dark" data-testid="trust-section">
+        <div class="container">
+            <div class="section-title">
+                <h2>Trusted by Forward-Thinking Businesses</h2>
+                <div class="divider"></div>
+                <p>Join hundreds of SMEs and entrepreneurs who have transformed their digital presence and achieved remarkable growth with our expert guidance.</p>
+            </div>
+            <div class="stats">
+                <div data-testid="stat-0">
+                    <div class="stat-number">500+</div>
+                    <div class="stat-label">Clients Served</div>
+                </div>
+                <div data-testid="stat-1">
+                    <div class="stat-number">1000+</div>
+                    <div class="stat-label">Campaigns Launched</div>
+                </div>
+                <div data-testid="stat-2">
+                    <div class="stat-number">300%</div>
+                    <div class="stat-label">Average ROI</div>
+                </div>
+                <div data-testid="stat-3">
+                    <div class="stat-number">98%</div>
+                    <div class="stat-label">Client Satisfaction</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Banner -->
+    <section class="section section-gold-gradient" data-testid="cta-banner">
+        <div class="container text-center">
+            <h2 style="font-size: 2.5rem; color: #fff; margin-bottom: 1.5rem;">Ready to Transform Your Business?</h2>
+            <p class="text-gray" style="font-size: 1.125rem; margin-bottom: 2rem; max-width: 48rem; margin-left: auto; margin-right: auto;">
+                Let's discuss how we can help you achieve your digital marketing goals and drive exponential growth.
+            </p>
+            <a href="contact.html" class="btn btn-primary" data-testid="cta-contact-button" style="font-size: 1.125rem; padding: 1.25rem 2.5rem;">Schedule a Free Consultation</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div>
+                    <h3 class="footer-title">Evolute Marketing</h3>
+                    <p class="text-gray" style="font-size: 0.875rem; line-height: 1.6;">
+                        Your trusted partner for premium digital marketing solutions. We help businesses evolve and thrive in the digital landscape.
+                    </p>
+                </div>
+                <div>
+                    <h4>Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="why-choose-us.html">Why Choose Us</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4>Contact Us</h4>
+                    <ul class="footer-links">
+                        <li style="display: flex; align-items: start;">
+                            <span style="color: var(--gold); margin-right: 0.5rem;">📞</span>
+                            <a href="tel:+919978019876">+91 99780 19876</a>
+                        </li>
+                        <li style="display: flex; align-items: start;">
+                            <span style="color: var(--gold); margin-right: 0.5rem;">✉️</span>
+                            <a href="mailto:info@evolutemarketing.com">info@evolutemarketing.com</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-divider">
+                <p>Copyright © 2026 Evolute Marketing. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="main.js"></script>
+</body>
+</html>
